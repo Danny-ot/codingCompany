@@ -3,7 +3,7 @@
     padding: 0;
 }
 .header{
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/building.jpg);
+    background-image: linear-gradient( rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/building.jpg);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
@@ -12,12 +12,13 @@
 }
 .nav{
  padding-top: 20px;
- padding-left: 40px;
+
  display: inline-block;
  width: 100%;
 }
 .logo{
     float: left;
+    margin-left: 20px;
     
 }
 .logo h1{
@@ -26,7 +27,11 @@
     font-family: Helvetica, sans-serif;
     color: white;
 }
-.logo #logo{
+.nav-lists img{
+    display: none;
+   
+}
+span{
     color : red;
 }
 .nav-links{
@@ -35,6 +40,12 @@
     margin-top: 3px;
     
     
+}
+.nav-links img{
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+    display: none;
 }
 .nav-links li{
     float: left;
@@ -64,7 +75,7 @@ sup{
 }
 .header-content{
     clear: both;
-    width: 800px;
+    width: 60%;
     position: relative;
     top: 200px;
     left: 280px;
@@ -72,7 +83,7 @@ sup{
     color: white;
 }
 .header-content h1{
-    font-size: 45px;
+    font-size: 300 %;
     word-spacing: 4px;
     font-family:'Times New Roman', Times, serif;
 }
@@ -101,16 +112,169 @@ sup{
     background-color: red;
     transition: 0.5s;
 }
-#body{
-    margin: 34px;
-}
-.about-us h1 span{
+#span{
     color: red;
-    font-size: 35px;
+    font-size: 37px;
+}
+.about-us{
+    margin: 40px 40px 0px 40px;
 }
 .about-us h1{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 30px;
     letter-spacing: 1px;
 }
+.about-us-body{
+    font-size: 17px;
+    margin-top: 9px;
+    
+}
+#mission{
+    margin-top: 12px;
+}
+#mission h1{
+    font-size: 25px;
+    text-align: left;
+}
+.our-courses{
+    margin: 25px 28px 0px 40px;
+    text-align: center;
+    
+}
+.row{
+    display:flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+}
+.our-courses h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.our-courses h3{
+    font-weight: bold;
+}
+
+.col{
+    width: 280px;
+    background-color: rgb(255, 242, 227);
+    padding: 25px;
+    margin-right: 12px;
+    margin: 34px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2)
+}
+.facilities-col img{
+    width: 330px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.facilities-col{
+    width: 330px;
+    margin: 30px;
+    text-align: left;
+}
+footer{
+    background-color: rgb(31, 29, 29);
+   padding: 12px 12px 0px 40px;
+   margin-top: 30px;
+}
+
+footer img{
+    width: 25px;
+    height: 25px;
+    
+}
+footer div {
+    border-top:1px gray solid;
+    padding: 12px 12px 12px 0px;
+    
+    width: 1200px;
+}
+#para{
+    margin-left: 12px;
+    font-size: 17px;
+}
+
+
+@media only screen and (max-width: 700px) {
+     ::-webkit-scrollbar{
+    	display: none;
+	}
+    .header-content{
+        width: 400px;
+        left: 20px;
+        top: 120px;
+    }
+    
+    .header-content h1{
+        font-size: 40px;
+    }
+    .header-content p{
+        font-size: 15px;
+    }
+    .logo h1{
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    .nav{
+        padding-top: 0px;
+    }
+    #menu{
+        margin-top: 20px;
+    }
+    .nav-links{
+        width: 250px;
+        
+        background-color: red;
+        margin-right: 0px;
+        right: 0;
+        height: 100vh;
+        z-index: 1;
+        position: absolute;
+        right: -280px;
+        transition: 0.5s;
+    }
+    .nav-links li{
+        clear: both;
+        
+    }
+    .nav-lists img{
+        display: block;
+        float: right;
+        margin-right: 55px;
+        cursor: pointer;
+
+    }
+    .nav-links img{
+        display: block;
+    }
+    .about-us{
+        margin: 20px;
+    }
+    .about-us-body p , ul{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .our-courses{
+       
+        justify-content: center;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .header{
+        
+        overflow: hidden;
+    }
+    footer div{
+        width: 400px;
+    }
+    
+}
+
